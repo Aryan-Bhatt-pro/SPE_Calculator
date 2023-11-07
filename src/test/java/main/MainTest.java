@@ -9,10 +9,10 @@ public class MainTest {
 
     @Test
     public void test__power() {
-        int expectedAnswer = 32;
+        int expectedAnswer = 16;
         int base = 2;
-        int power = 5;
-        int answer = Main.power(2, 5);
+        int power = 4;
+        int answer = Main.power(2, 4);
         Assert.assertEquals(answer, expectedAnswer);
     }
 
