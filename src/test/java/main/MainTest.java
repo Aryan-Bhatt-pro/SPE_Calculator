@@ -9,11 +9,11 @@ public class MainTest {
 
     @Test
     public void test__power() {
-        int expectedAnswer = 16;
-        int base = 2;
-        int power = 4;
-        int answer = Main.power(2, 4);
-        Assert.assertEquals(answer, expectedAnswer);
+        double expectedAnswer = 16;
+        double base = 2;
+        double power = 4;
+        double answer = Main.power(base, power);
+        Assert.assertEquals(answer, expectedAnswer, 0);;
     }
 
     @Test

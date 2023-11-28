@@ -21,10 +21,13 @@ public class Main {
             if(choice == 1) {
                 System.out.println("You have chosen power function");
                 System.out.println("Please enter base and exponent");
-                int base = reader.nextInt();
-                int exp = reader.nextInt();
+                double base = reader.nextDouble();
+                double exp = reader.nextDouble();
                 logger.info("Now executing power function");
-                int answer = power(base, exp);
+                double answer = power(base, exp);
+                // double __base = base;
+                // double __exp = exp;
+                // int answer = Math.pow(base, exp);
                 System.out.println(base + " raise to the power " + exp + " is: ");
                 System.out.println(answer);
             }
@@ -48,9 +51,14 @@ public class Main {
                 System.out.println("Please enter the two number");
                 int a = reader.nextInt();
                 int b = reader.nextInt();
-                logger.info("Now calculating gcd");
-                System.out.println("GCD of " + a + " and " + b);
-                System.out.println(gcd(a, b));
+                if(a <= 0 || b <= 0){
+                    System.out.println("Number cannot be non positive.");
+                }
+                else{
+                    logger.info("Now calculating gcd");
+                    System.out.println("GCD of " + a + " and " + b);
+                    System.out.println(gcd(a, b));
+                }
             }
             else if(choice == 4){
 
@@ -58,18 +66,19 @@ public class Main {
         }
     }
 
-    public static int power(int base, int exp){
-        int initialBase = base;
-        int initalExp = exp;
-        int answer = 1;
-        while(exp > 0) {
-            if ((exp & 1) == 1) {
-                answer *= base;
-            }
-            base *= base;
-            exp >>= 1;
-        }
-        return answer;
+    public static double power(double base, double exp){
+        // int initialBase = base;
+        // int initalExp = exp;
+        // int answer = 1;
+        // while(exp > 0) {
+        //     if ((exp & 1) == 1) {
+        //         answer *= base;
+        //     }
+        //     base *= base;
+        //     exp >>= 1;
+        // }
+        // return answer;
+        return Math.pow(base, exp);
     }
 
     public static int nCr(int n, int r){
