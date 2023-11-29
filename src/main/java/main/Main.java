@@ -67,17 +67,6 @@ public class Main {
     }
 
     public static double power(double base, double exp){
-        // int initialBase = base;
-        // int initalExp = exp;
-        // int answer = 1;
-        // while(exp > 0) {
-        //     if ((exp & 1) == 1) {
-        //         answer *= base;
-        //     }
-        //     base *= base;
-        //     exp >>= 1;
-        // }
-        // return answer;
         return Math.pow(base, exp);
     }
 
