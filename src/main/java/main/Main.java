@@ -30,7 +30,7 @@ public class Main {
             }
             else if(choice == 2){
                 System.out.println("You have chosen nCr function");
-                System.out.println("PLease enter n and r");
+                System.out.println("Please enter n and r");
                 int n = reader.nextInt();
                 int r = reader.nextInt();
                 if(n < 0 || r < 0){
