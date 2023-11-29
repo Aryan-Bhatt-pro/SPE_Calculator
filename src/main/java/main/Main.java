@@ -25,9 +25,6 @@ public class Main {
                 double exp = reader.nextDouble();
                 logger.info("Now executing power function");
                 double answer = power(base, exp);
-                // double __base = base;
-                // double __exp = exp;
-                // int answer = Math.pow(base, exp);
                 System.out.println(base + " raise to the power " + exp + " is: ");
                 System.out.println(answer);
             }
@@ -36,7 +33,10 @@ public class Main {
                 System.out.println("PLease enter n and r");
                 int n = reader.nextInt();
                 int r = reader.nextInt();
-                if(n >= r){
+                if(n < 0 || r < 0){
+                    System.out.println("nCr cannot be calculated on negative function");
+                }
+                else if(n >= r){
                     logger.info("Now calculating nCr");
                     int answer = nCr(n, r);
                     System.out.println("nCr for n = " + n + " and r = " + r + " is:");
